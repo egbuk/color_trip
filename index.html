@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Color trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="script.js"></script>
+</head>
+<body onload="return init();">
+    <canvas id="view"></canvas>
+    <div id="toolbar">
+        <input type="range" min="1" max="500" value="1" onchange="changesteps(this);" id="stepsSelect">
+        <input type="range" min="2" max="300" value="10" onchange="changeradius(this);" id="radiusSelect">
+        <input type="range" min="1" max="1000" value="100" onchange="changeCircleRadius(this);" id="cRadiusSelect">
+        <input type="checkbox" onchange="changeAnimation(this);" id="changeAnimation">
+        <button onclick="save()">Save as Image</button>
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="toggleFullScreen()">Toggle fullscreen</button>
+    </div>
+    <a id="link" style="display: none;"></a>
+</body>
+</html>
