@@ -78,7 +78,7 @@ function init() {
     window.onresize = resize;
 
     setInterval(function() {
-        if (steps < 1000 && animate) {
+        if (steps < 512 && animate) {
             steps *= 2;
             document.getElementById('stepsSelect').value = steps;
         }
