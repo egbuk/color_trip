@@ -78,7 +78,7 @@ function init() {
     window.onresize = resize;
 
     setInterval(function() {
-        if (steps < 512 && animate) {
+        if (steps < 256 && animate) {
             steps *= 2;
             document.getElementById('stepsSelect').value = steps;
         }
@@ -118,7 +118,7 @@ function init() {
         var i;
         for (i = 1; i <= steps; i++){
             let plus = (i/steps*Math.PI);
-            let tmpRadius = (cRadius * Math.cos((phase/colorSteps)*2*Math.PI+plus));
+            let tmpRadius = (cRadius * Math.cos(((phase*2)/colorSteps)*2*Math.PI+plus));
             x = (m_canvas.width / 2) + tmpRadius * Math.cos(plus);
             y = (m_canvas.height / 2) + tmpRadius * Math.sin(plus);
             ctx.beginPath();
