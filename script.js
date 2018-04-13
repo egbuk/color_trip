@@ -123,14 +123,7 @@ function init() {
             y = (m_canvas.height / 2) + tmpRadius * Math.sin(plus);
             ctx.beginPath();
             ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
-            let c_plus;
-            //c_plus = Math.sin((steps-i)/steps*Math.PI)*2*Math.PI;
-            //let r = Math.round(128+Math.cos((phase/colorSteps)*2*Math.PI+c_plus)*128),
-            //    g = Math.round(128+Math.cos((phase/colorSteps)*2*Math.PI+Math.PI/3+c_plus)*128),
-            //    b = Math.round(128+Math.cos((phase/colorSteps)*2*Math.PI+(Math.PI/3*2)+c_plus)*128);
-            //ctx.fillStyle = 'hsl('+Math.sin((steps-i)/steps*Math.PI)*360+',100%,50%)';
             ctx.fillStyle = 'hsl('+Math.round((phase/colorSteps*360)+(i/steps*360))+',100%,50%)';
-            //ctx.fillStyle = 'rgba('+color[0]+','+color[1]+','+color[2]+',1)';
             ctx.fill();
         }
         view.drawImage(m_canvas, 0, 0);
