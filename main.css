@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 #toolbar {
@@ -7,4 +8,8 @@ body {
     overflow-x: auto;
     white-space: nowrap;
     height: 45px;
+}
+
+.hidden {
+    display: none;
 }
